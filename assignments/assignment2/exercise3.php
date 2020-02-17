@@ -11,6 +11,7 @@ for($x = 1; $x < $intRows+1; $x++){
     }
     $tableOutput .= "</tr>";
 }
+$tableOutput .= "</table>";
 ?>
 
 <!DOCTYPE html>
