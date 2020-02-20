@@ -1,10 +1,10 @@
 <?php
 class Calculator{
 
-    function calc($operand=null,$val1=null,$val2=null){
+    function calc($operand=null,$val1="NaN",$val2="NaN"){
         $result = 0;
         $value = 0;
-        if ($operand === null || $val1 === null || $val2 === null) {
+        if ($operand === null || !is_int($val1) || !is_int($val2)) {
             return "You must enter a string and two numbers. <br>";
         }
         switch ($operand) {
