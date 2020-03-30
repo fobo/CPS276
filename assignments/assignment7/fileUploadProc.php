@@ -88,7 +88,7 @@ class uploadFile extends PdoMethods{
     public function createList($records){
             $list ='<ol>';
             foreach ($records as $row) {
-                $list .= "<li><a href=\"uploads/{$row['flocation']}\">{$row['fname']}</a></li>";
+                $list .= "<li><a href=\"uploads/{$row['flocation']}\" target='_blank'>{$row['fname']}</a></li>";
             }
             $list .= '</ol>';
         return $list;
