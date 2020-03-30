@@ -16,7 +16,7 @@ if(isset($_POST)){
 </head>
 <body>
 <h1>File Upload</h1>
-<a href="/assignment7/listFiles.php" target='_blank'>Show File List</a>
+<a href="/assignment7/listFiles.php"'>Show File List</a>
 <form action="" method="post" enctype="multipart/form-data">
   <div class="form-group">
   <label for="userNameInput">File Name</label>
