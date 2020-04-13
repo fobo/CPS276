@@ -41,7 +41,7 @@ class AddDisplayNote extends PdoMethods{
             //Open DB
             $pdo = new PdoMethods();
             //Build Query
-            $sql = "SELECT note_data, DATE_FORMAT(note_time, \"%c/%d/%Y %l:%i %p\") AS note_time FROM noteTable WHERE note_time >= :begDate AND note_time <= :endDate;";
+            $sql = "SELECT note_data, DATE_FORMAT(note_time, \"%c/%d/%Y %l:%i %p\") AS note_time FROM noteTable WHERE note_time >= :begDate AND note_time <= :endDate ORDER BY note_time;";
 
             $bindings = [
                 [':begDate', $begDate, 'str'],
@@ -74,22 +74,6 @@ class AddDisplayNote extends PdoMethods{
     }
 }
 
-/*
-  <tr>
-    <th>Firstname</th>
-    <th>Lastname</th>
-    <th>Age</th>
-  </tr>
-  <tr>
-    <td>Jill</td>
-    <td>Smith</td>
-    <td>50</td>
-  </tr>
-  <tr>
-    <td>Eve</td>
-    <td>Jackson</td>
-    <td>94</td>
-  </tr>
-*/
+
 
 ?>
